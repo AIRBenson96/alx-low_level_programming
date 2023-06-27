@@ -1,16 +1,18 @@
 #include <stdio.h>
-
+/**
+ * main - Entry
+ * Description: 'Print alphabets in the lowercase'
+ * Return: Always 0
+ */
 int main(void)
 {
-char letter = 'a';
+int letter = 97;
 
-while (letter <= 'z')
+while (letter <= 122)
 {
 putchar(letter);
 letter++;
 }
-
 putchar('\n');
-
-return 0;
+return (0);
 }
