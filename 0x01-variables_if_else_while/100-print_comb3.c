@@ -1,13 +1,12 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'prints all possible different combinations of two digits'
- * Output: Always 0
+ * Description: Prints all possible different combinations of two digits
+ * Return: Always 0
  */
 int main(void)
 {
 int i, j;
-
 for (i = 48; i <= 56; i++)
 {
 for (j = i + 1; j <= 57; j++)
