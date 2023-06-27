@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ * main - Entry point
+ * Description: 'prints all the numbers of base 16 in lowercase'
+ * Return: Always 0
+ */
 int main(void)
 {
 char digit;
@@ -15,6 +19,5 @@ putchar(digit);
 }
 
 putchar('\n');
-
-return 0;
+return (0);
 }
