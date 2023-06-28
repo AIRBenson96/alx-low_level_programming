@@ -8,17 +8,23 @@
 int main(void)
 {
 unsigned long int fib1 = 1, fib2 = 2, nextFib;
-int count, numPerLine;
+int count, numPerLine, numbersPrinted;
 
 numPerLine = 10;
+
+numbersPrinted = 2;
 
 printf("%lu, %lu", fib1, fib2);
 
 for (count = 3; count <= 98; count++)
 {
 nextFib = fib1 + fib2;
+
 printf(", %lu", nextFib);
-if (count % numPerLine == 0)
+
+numbersPrinted++;
+
+if (numbersPrinted % numPerLine == 0)
 printf("\n");
 
 fib1 = fib2;
