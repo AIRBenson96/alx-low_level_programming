@@ -1,36 +1,40 @@
 #include <stdio.h>
 
 /**
+ * print_fibonacci - Prints the first n Fibonacci numbers.
+ * @n: The number of Fibonacci numbers to print.
+ */
+void print_fibonacci(int n)
+{
+int current = 1, previous = 0, temp;
+int count = 0;
+
+while (count < n)
+{
+printf("%d", current);
+count++;
+
+if (count < n)
+{
+printf(", ");
+}
+
+temp = current;
+current = previous + current;
+previous = temp;
+}
+
+printf("\n");
+}
+
+/**
  * main - Entry point
- *
+ * Description: Prints the first 98 Fibonacci numbers.
  * Return: Always 0
  */
 int main(void)
 {
-unsigned long int fib1 = 1, fib2 = 2, nextFib;
-int count, numPerLine, numbersPrinted;
-
-numPerLine = 10;
-numbersPrinted = 2;
-
-printf("%lu, %lu", fib1, fib2);
-
-for (count = 3; count <= 98; count++)
-{
-nextFib = fib1 + fib2;
-
-if (numbersPrinted % numPerLine != 0)
-printf(", %lu", nextFib);
-else
-printf(",\n%lu", nextFib);
-
-numbersPrinted++;
-
-fib1 = fib2;
-fib2 = nextFib;
-}
-
-printf("\n");
+print_fibonacci(98);
 
 return (0);
 }
