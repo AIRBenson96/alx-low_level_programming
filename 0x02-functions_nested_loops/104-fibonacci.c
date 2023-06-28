@@ -6,12 +6,12 @@
  */
 void print_fibonacci(int n)
 {
-int current = 1, previous = 0, temp;
+unsigned long int current = 1, previous = 0, temp;
 int count = 0;
 
 while (count < n)
 {
-printf("%d", current);
+printf("%lu", current);
 count++;
 
 if (count < n)
