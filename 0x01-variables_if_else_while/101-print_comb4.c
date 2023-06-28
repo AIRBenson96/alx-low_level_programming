@@ -1,35 +1,32 @@
 #include <stdio.h>
-
+/**
+ * main - Entry point
+ * Description: prints all possible different combinations of three digits
+ * Return: Always 0
+ */
 int main(void)
 {
-int i, j;
-
-putchar('0');
-putchar('1');
-putchar('2');
-putchar('3');
-
-for (i = 4; i < 10; i++)
+int i, j, k;
+for (i = 48; i < 56; i++)
 {
-putchar(',');
-putchar(' ');
-
-for (j = 0; j < i; j++)
+for (j = i + 1; j < 56; j++)
 {
-putchar('0' + j / 1000);
-putchar('0' + (j % 1000) / 100);
-putchar('0' + (j % 100) / 10);
-putchar('0' + j % 10);
-
-if (j < i - 1)
+for (k = j + 1; k < 56; k++)
+{
+if (k > j && j > i)
+{
+putchar(i);
+putchar(j);
+putchar(k);
+if (i != 55 || j != 56)
 {
 putchar(',');
 putchar(' ');
 }
 }
 }
-
+}
+}
 putchar('\n');
-
-return 0;
+return (0);
 }
