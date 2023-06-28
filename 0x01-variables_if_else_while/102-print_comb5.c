@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ * main - Entry point
+ * Description: 'prints all possible combinations of two two-digit numbers'
+ * Return: Always 0
+ */
 int main(void)
 {
 int num1, num2;
@@ -22,8 +26,6 @@ putchar(' ');
 }
 }
 }
-
 putchar('\n');
-
-return 0;
+return (0);
 }
