@@ -17,9 +17,7 @@ printf("%lu, %lu", fib1, fib2);
 for (count = 3; count <= 98; count++)
 {
 nextFib = fib1 + fib2;
-
 printf(", %lu", nextFib);
-
 if (count % numPerLine == 0)
 printf("\n");
 
